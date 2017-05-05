@@ -31,11 +31,15 @@ class ProfileViewController: UIViewController {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+    self.automaticallyAdjustsScrollViewInsets = false
     scrollView.delegate = self
-    movingAvatar = (coverView.frame.height - movingCover) / 2
+    scrollView.showsHorizontalScrollIndicator = false
+    scrollView.showsVerticalScrollIndicator = false
+    scrollView.decelerationRate = UIScrollViewDecelerationRateFast
     
     // Interpolations supporter
     avatarOriginalTransform = avatarView.transform
+    movingAvatar = (coverView.frame.height - movingCover) / 2
     
     setupInterpolations()
   }
@@ -49,10 +53,12 @@ extension ProfileViewController: UIScrollViewDelegate {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     let delta = scrollView.contentOffset.y
     
-    guard delta <= movingCover else { return }
-    guard delta >= 0 else { return }
-    
-    let progress = delta / movingCover
+    var progress = delta / movingCover
+    if progress > 1 {
+      progress = 1
+    } else if progress < 0 {
+      progress = 0
+    }
     animateInterpolations(progress: progress)
   }
   
