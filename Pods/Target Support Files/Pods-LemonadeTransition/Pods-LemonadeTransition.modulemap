@@ -1,0 +1,6 @@
+framework module Pods_LemonadeTransition {
+  umbrella header "Pods-LemonadeTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}

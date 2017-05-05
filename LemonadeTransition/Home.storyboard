@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fdw-FM-mnR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="KnB-od-6oF">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="fdw-FM-mnR" customClass="HomeViewController" customModule="LemonadeTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p9N-LK-kLa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qk7-9T-Cb5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E9w-tQ-QVN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebb-QQ-sRa" userLabel="Navigation Bar View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXP-ni-Ikg" userLabel="Drawer Menu Bar Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="8hH-ft-ZOI"/>
+                                        </constraints>
+                                        <state key="normal" image="icNavigationDrawer"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldT-Am-cHR" userLabel="Notif Bar Button">
+                                        <rect key="frame" x="315" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="GaB-d6-pUq"/>
+                                        </constraints>
+                                        <state key="normal" image="icMoreLT"/>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carousel" translatesAutoresizingMaskIntoConstraints="NO" id="eLp-7c-Xa5">
+                                        <rect key="frame" x="100" y="0.0" width="175" height="60"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="eLp-7c-Xa5" firstAttribute="top" secondItem="ebb-QQ-sRa" secondAttribute="top" id="2ab-cZ-FJh"/>
+                                    <constraint firstAttribute="bottom" secondItem="ldT-Am-cHR" secondAttribute="bottom" id="ECV-nM-b1M"/>
+                                    <constraint firstAttribute="height" constant="60" id="EGF-Mn-gIQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="eLp-7c-Xa5" secondAttribute="bottom" id="K9n-KI-LcW"/>
+                                    <constraint firstItem="ldT-Am-cHR" firstAttribute="top" secondItem="ebb-QQ-sRa" secondAttribute="top" id="PDY-vr-DnU"/>
+                                    <constraint firstItem="eLp-7c-Xa5" firstAttribute="leading" secondItem="rXP-ni-Ikg" secondAttribute="trailing" constant="40" id="RFd-Mc-PMI"/>
+                                    <constraint firstItem="ldT-Am-cHR" firstAttribute="leading" secondItem="eLp-7c-Xa5" secondAttribute="trailing" constant="40" id="TYy-R6-dSb"/>
+                                    <constraint firstItem="rXP-ni-Ikg" firstAttribute="top" secondItem="ebb-QQ-sRa" secondAttribute="top" id="gO7-fz-4Hq"/>
+                                    <constraint firstAttribute="bottom" secondItem="rXP-ni-Ikg" secondAttribute="bottom" id="gTw-At-YOV"/>
+                                    <constraint firstItem="rXP-ni-Ikg" firstAttribute="leading" secondItem="ebb-QQ-sRa" secondAttribute="leading" id="j9P-DT-j3l"/>
+                                    <constraint firstAttribute="trailing" secondItem="ldT-Am-cHR" secondAttribute="trailing" id="tlp-5p-npl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVC-nK-qxr" userLabel="Bubbles View">
+                                <rect key="frame" x="0.0" y="110" width="375" height="416"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="FG0-Kp-uUQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="416"/>
+                                    </imageView>
+                                    <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aob-rZ-Vul">
+                                        <rect key="frame" x="157.5" y="178" width="60" height="60"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="C66-vR-84T"/>
+                                            <constraint firstAttribute="width" constant="60" id="YVW-kf-yQT"/>
+                                        </constraints>
+                                        <state key="normal" title="host"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FG0-Kp-uUQ" secondAttribute="bottom" id="UJu-5T-mSM"/>
+                                    <constraint firstItem="FG0-Kp-uUQ" firstAttribute="top" secondItem="vVC-nK-qxr" secondAttribute="top" id="Uoc-lo-E70"/>
+                                    <constraint firstItem="aob-rZ-Vul" firstAttribute="centerY" secondItem="FG0-Kp-uUQ" secondAttribute="centerY" id="cTL-G5-TQ6"/>
+                                    <constraint firstItem="FG0-Kp-uUQ" firstAttribute="leading" secondItem="vVC-nK-qxr" secondAttribute="leading" id="fHZ-Yu-E46"/>
+                                    <constraint firstAttribute="trailing" secondItem="FG0-Kp-uUQ" secondAttribute="trailing" id="nKt-v7-dWV"/>
+                                    <constraint firstItem="aob-rZ-Vul" firstAttribute="centerX" secondItem="FG0-Kp-uUQ" secondAttribute="centerX" id="oZm-aH-rHx"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCompass" translatesAutoresizingMaskIntoConstraints="NO" id="DXh-13-lW3">
+                                <rect key="frame" x="171" y="601" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="ANm-qb-tw1"/>
+                                    <constraint firstAttribute="width" secondItem="DXh-13-lW3" secondAttribute="height" id="LIs-MW-Ql5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vVC-nK-qxr" firstAttribute="top" secondItem="ebb-QQ-sRa" secondAttribute="bottom" constant="50" id="4qj-at-Vbq"/>
+                            <constraint firstItem="ebb-QQ-sRa" firstAttribute="leading" secondItem="E9w-tQ-QVN" secondAttribute="leading" id="8pm-68-hpQ"/>
+                            <constraint firstItem="ebb-QQ-sRa" firstAttribute="top" secondItem="E9w-tQ-QVN" secondAttribute="topMargin" id="DQn-fG-ApA"/>
+                            <constraint firstItem="DXh-13-lW3" firstAttribute="top" secondItem="vVC-nK-qxr" secondAttribute="bottom" constant="75" id="EDa-8O-02U"/>
+                            <constraint firstAttribute="bottom" secondItem="DXh-13-lW3" secondAttribute="bottom" constant="33" id="JGz-j0-GxC"/>
+                            <constraint firstAttribute="trailing" secondItem="vVC-nK-qxr" secondAttribute="trailing" id="eC0-Gn-afs"/>
+                            <constraint firstItem="DXh-13-lW3" firstAttribute="centerX" secondItem="E9w-tQ-QVN" secondAttribute="centerX" id="jKD-WK-eKh"/>
+                            <constraint firstAttribute="trailing" secondItem="ebb-QQ-sRa" secondAttribute="trailing" id="myW-e2-41L"/>
+                            <constraint firstItem="vVC-nK-qxr" firstAttribute="leading" secondItem="E9w-tQ-QVN" secondAttribute="leading" id="vrl-ZA-Aom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bubblesView" destination="FG0-Kp-uUQ" id="j39-a8-VKj"/>
+                        <outlet property="carouselView" destination="eLp-7c-Xa5" id="XKh-ca-UCd"/>
+                        <outlet property="compassView" destination="DXh-13-lW3" id="dHc-0G-n4D"/>
+                        <outlet property="leftMenuButton" destination="rXP-ni-Ikg" id="0ea-E1-mCP"/>
+                        <outlet property="rightMenuButton" destination="ldT-Am-cHR" id="3gS-Ek-wef"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VM7-S1-5qZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-562.39999999999998" y="253.2233883058471"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="carousel" width="205" height="57"/>
+        <image name="icCompass" width="24" height="24"/>
+        <image name="icMoreLT" width="24" height="24"/>
+        <image name="icNavigationDrawer" width="16" height="12"/>
+        <image name="login_bg" width="377" height="390"/>
+    </resources>
+</document>

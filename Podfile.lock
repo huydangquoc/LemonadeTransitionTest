@@ -1,0 +1,15 @@
+PODS:
+  - Hero (0.3.6)
+  - Interpolate (0.4.0)
+
+DEPENDENCIES:
+  - Hero
+  - Interpolate
+
+SPEC CHECKSUMS:
+  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
+  Interpolate: 682895f1a2fc091da0ba53ccb018520daf51f8fd
+
+PODFILE CHECKSUM: efe8fb797a06f1e5a4dc2f51aa6786817a8b26b7
+
+COCOAPODS: 1.2.0
