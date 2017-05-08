@@ -73,6 +73,9 @@
                                             <constraint firstAttribute="width" constant="60" id="YVW-kf-yQT"/>
                                         </constraints>
                                         <state key="normal" title="host"/>
+                                        <connections>
+                                            <action selector="tapCenterBubble:" destination="fdw-FM-mnR" eventType="touchUpInside" id="78C-cE-Dsd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -108,6 +111,7 @@
                     <connections>
                         <outlet property="bubblesView" destination="FG0-Kp-uUQ" id="j39-a8-VKj"/>
                         <outlet property="carouselView" destination="eLp-7c-Xa5" id="XKh-ca-UCd"/>
+                        <outlet property="centerBubble" destination="aob-rZ-Vul" id="9ac-yc-NEH"/>
                         <outlet property="compassView" destination="DXh-13-lW3" id="dHc-0G-n4D"/>
                         <outlet property="leftMenuButton" destination="rXP-ni-Ikg" id="0ea-E1-mCP"/>
                         <outlet property="rightMenuButton" destination="ldT-Am-cHR" id="3gS-Ek-wef"/>

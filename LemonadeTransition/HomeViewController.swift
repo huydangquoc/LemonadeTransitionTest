@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class HomeViewController: UIViewController {
   @IBOutlet weak var leftMenuButton: UIButton!
@@ -14,27 +15,29 @@ class HomeViewController: UIViewController {
   @IBOutlet weak var carouselView: UIImageView!
   @IBOutlet weak var bubblesView: UIImageView!
   @IBOutlet weak var compassView: UIImageView!
+  @IBOutlet weak var centerBubble: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+    setupHero()
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  @IBAction func tapCenterBubble(_ sender: Any) {
+    let storyboard = UIStoryboard(name: "HostingMulti", bundle: nil)
+    if let controller = storyboard.instantiateViewController(withIdentifier: "HostingMultiViewController") as? HostingMultiViewController {
+      self.present(controller, animated: true, completion: nil)
+    }
   }
   
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  func setupHero() {
+    centerBubble.heroID = "hostAvatar"
+    leftMenuButton.heroModifiers = [.fade, HeroModifier.duration(1.0)]
+    rightMenuButton.heroModifiers = [.fade, HeroModifier.duration(1.0)]
+    carouselView.heroModifiers = [.fade, .scale(0.5), HeroModifier.duration(1.5)]
+    bubblesView.heroModifiers = [.fade, .scale(0.5), HeroModifier.duration(2.0)]
+    compassView.heroModifiers = [.fade, .rotate(CGFloat.pi), HeroModifier.duration(1.5)]
+  }
   
 }

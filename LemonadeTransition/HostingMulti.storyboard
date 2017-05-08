@@ -12,7 +12,7 @@
         <!--Hosting Multi View Controller-->
         <scene sceneID="sVn-5e-MM7">
             <objects>
-                <viewController id="Mm6-PO-c2k" customClass="HostingMultiViewController" customModule="LemonadeTransition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HostingMultiViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mm6-PO-c2k" customClass="HostingMultiViewController" customModule="LemonadeTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hSN-Or-381"/>
                         <viewControllerLayoutGuide type="bottom" id="RiG-VJ-McX"/>

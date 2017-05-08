@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class HostingMultiViewController: UIViewController {
   @IBOutlet weak var avatarImage: UIImageView!
@@ -17,5 +18,14 @@ class HostingMultiViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    setupHero()
+  }
+  
+  func setupHero() {
+    isHeroEnabled = true
+    avatarImage.heroID = "hostAvatar"
+    avatarImage.heroModifiers = [HeroModifier.duration(1.0), .delay(2.0)]
+    tableView.heroModifiers = [.translate(y: 300), HeroModifier.duration(1.0), .delay(3.0)]
   }
 }
